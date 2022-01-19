@@ -1,0 +1,16 @@
+.slab {
+    display: flex;
+    width: 25%;
+    height: 33%;
+    background-color: #d4a752;
+    border: 2px dashed bisque;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    font-size: 350%;
+}
+
+.marker {
+
+}
