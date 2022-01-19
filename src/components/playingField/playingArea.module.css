@@ -1,0 +1,11 @@
+.area {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    max-height: 400px;
+    background-color: gray;
+}
+
+.field {
+    display: flex;
+}
