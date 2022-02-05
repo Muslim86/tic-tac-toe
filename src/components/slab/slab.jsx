@@ -1,15 +1,16 @@
 import style from './slab.module.css';
-import {useState} from "react";
+import {useRef, useState} from "react";
 import {O, X} from "../../constants/constants";
 
 const Slab = (props) => {
     const [type, setType] = useState('')
+    const slabRef = useRef();
 
     const changeSlabType = () => {
-        console.log(props.currentPlayer)
         if (type) return;
         if (props.gameStats.includes('Победил')) return;
         const player = props.currentPlayer;
+        slabRef.current.classList.toggle(style.rotate)
         let slabsType = props.slabsType;
         setType(player);
         if (player === X) {
@@ -25,7 +26,7 @@ const Slab = (props) => {
 
     return (
         <div onClick={() => changeSlabType()} className={style.slab}>
-            <div className={style.marker}>
+            <div ref={slabRef}>
                 {type}
             </div>
         </div>

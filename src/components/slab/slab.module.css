@@ -9,8 +9,20 @@
     justify-content: center;
     cursor: grab;
     font-size: 350%;
+    text-shadow: 0 0 5px black;
 }
 
-.marker {
+.rotate {
+    animation: rotate-slab 500ms;
+    cursor: no-drop;
+}
+
+@keyframes rotate-slab {
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
 
 }
